@@ -13,6 +13,6 @@ const router = createBrowserRouter([
   },
 ])
 
-const Root = () => <RouterProvider router={router} />
+const AppNavigator = () => <RouterProvider router={router} />
 
-export default Root
+export default AppNavigator

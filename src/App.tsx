@@ -1,7 +1,13 @@
-import Root from './routes/routes'
+import AppProvider from './context/AppProvider'
+
+import AppNavigator from './routes'
 
 const App = () => {
-  return <Root />
+  return (
+    <AppProvider>
+      <AppNavigator />
+    </AppProvider>
+  )
 }
 
 export default App

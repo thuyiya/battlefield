@@ -1,4 +1,4 @@
-import Game from './Game/Game'
-import Welcome from './Welcome/Welcome'
+import Game from './Game'
+import Welcome from './Welcome'
 
 export { Game, Welcome }

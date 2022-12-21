@@ -1,5 +1,5 @@
-import BattlefieldGrid from './BattlefieldGrid/BattlefieldGrid'
-import ScoreBoard from './ScoreBoard/ScoreBoard'
-import ShipStatusBoard from './ShipStatusBoard/ShipStatusBoard'
+import BattlefieldGrid from './BattlefieldGrid'
+import ScoreBoard from './ScoreBoard'
+import ShipStatusBoard from './ShipStatusBoard'
 
 export { BattlefieldGrid, ScoreBoard, ShipStatusBoard }
