@@ -166,8 +166,11 @@ battlefield
 │ │ │ ShipStatusBoard
 │ │
 │ └───routes
+│ │ │ index.ts
+│ │ │ ProtectedRoute.tsx
 │ │
 │ └───hooks
+│ │ │ useApp.ts
 │ │
 │ └───screens
 │ │ │ index.ts
@@ -175,8 +178,11 @@ battlefield
 │ │ │ Welcome
 │ │
 │ └───context
+│ │ │ AppContext.tsx
+│ │ │ AppProvider.tsx
 │ │
 │ └───types
+│ │ │ USer.ts
 
 ### Workflow
 

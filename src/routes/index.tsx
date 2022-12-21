@@ -1,6 +1,6 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-
 import { Welcome, Game } from '../screens'
+import ProtectedRoute from './ProtectedRoute'
 
 const router = createBrowserRouter([
   {
@@ -9,7 +9,11 @@ const router = createBrowserRouter([
   },
   {
     path: '/game',
-    element: <Game />,
+    element: (
+      <ProtectedRoute>
+        <Game />
+      </ProtectedRoute>
+    ),
   },
 ])
 
