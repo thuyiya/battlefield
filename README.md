@@ -140,6 +140,44 @@ Ship layout data:
 }
 ```
 
+### Get Start
+
+#### Understanding the File Structure
+
+battlefield
+│  
+└───src
+│ │ App.tsx
+│ │ index.tsx
+│ │
+│ └───assets
+│ │ │ images
+│ │  
+│ └───constants
+│ │ │ app.ts
+│ │ │ styles.ts
+│ │
+│ └───**tests**
+│ │
+│ └───components
+│ │ │ index.ts
+│ │ │ BattleFieldGrid
+│ │ │ ScoreBoard
+│ │ │ ShipStatusBoard
+│ │
+│ └───routes
+│ │
+│ └───hooks
+│ │
+│ └───screens
+│ │ │ index.ts
+│ │ │ Game
+│ │ │ Welcome
+│ │
+│ └───context
+│ │
+│ └───types
+
 ### Workflow
 
 #### Desktop
