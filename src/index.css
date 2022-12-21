@@ -4,8 +4,25 @@ body {
     'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: 'Antonio', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  color: '#333333';
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+button {
+  all: unset;
+}
+
+input {
+  all: unset;
+  border: 1px #dddd solid;
+}
+
+.btn {
+  height: 40px;
+  width: 200px;
+  text-align: center;
+  font-size: 18px;
+  margin: 8px;
+  background-color: #f39c12;
 }
