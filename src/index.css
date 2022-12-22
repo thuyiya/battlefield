@@ -26,3 +26,26 @@ input {
   margin: 8px;
   background-color: #f39c12;
 }
+
+.col-2 {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+
+@media (max-width: 1024px) {
+  .col-2 {
+    grid-template-columns: 1fr;
+  }
+  .col-2 .item:nth-of-type(1) {
+    order: 1;
+  }
+  .flex_center_row {
+    justify-content: center;
+  }
+  .t-me-20 {
+    margin-right: 20px;
+  }
+}
+

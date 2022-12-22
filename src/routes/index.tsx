@@ -1,11 +1,16 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import { Welcome, Game } from '../screens'
 import ProtectedRoute from './ProtectedRoute'
+import PublicRoute from './PublicRoute'
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <Welcome />,
+    element: (
+      <PublicRoute>
+        <Welcome />
+      </PublicRoute>
+    ),
   },
   {
     path: '/game',

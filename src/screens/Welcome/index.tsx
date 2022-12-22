@@ -18,6 +18,8 @@ const Welcome = () => {
 
   const disabledButton = useMemo(() => () => text.trim().length < 2, [text])
 
+  // console.log('appContext welcome ', appContext)
+
   return (
     <div className='container'>
       <h1>Welcome To BATTLEFIELD</h1>
