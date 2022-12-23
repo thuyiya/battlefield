@@ -33,6 +33,19 @@ input {
   grid-template-columns: repeat(2, 1fr);
 }
 
+.flex_center_row {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.line {
+  height: 1px;
+  width: 80%;
+  background-color: #333333;
+  margin: 0px auto;
+}
 
 @media (max-width: 1024px) {
   .col-2 {
@@ -48,4 +61,3 @@ input {
     margin-right: 20px;
   }
 }
-
