@@ -5,3 +5,46 @@
   padding: 2rem 0;
 }
 
+
+@media (max-width: 1024px) {
+  .score_card {
+    width: 180px;
+  }
+  .score_card h1 {
+    line-height: 0.2;
+    font-size: 24px !important;
+  }
+  .tablet-row {
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .imageNScore {
+    display: flex !important;
+    align-items: center;
+    height: fit-content;
+  }
+  .ship {
+    width: 46px !important;
+  }
+  .hit_small {
+    height: 11px !important;
+    object-fit: contain;
+    margin: 2px 1px !important;
+  }
+  .ship-wrapper {
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row !important;
+    width: 360px;
+    flex-wrap: wrap !important;
+  }
+  .select-grid {
+    margin: 0 auto;
+  }
+
+  td {
+    height: 90px;
+    width: 90px;
+  }
+}

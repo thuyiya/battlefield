@@ -5,4 +5,9 @@ const STRINGS = {
   },
 }
 
-export { STRINGS }
+const GAME_BOARD = {
+    ROWS: 10,
+    CELLS: 10
+}
+
+export { STRINGS, GAME_BOARD }

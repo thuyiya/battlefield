@@ -1,0 +1,24 @@
+
+table,
+th,
+td {
+  border: 1px solid;
+  font-size: 0px;
+}
+
+td {
+  height: 40px;
+  width: 40px;
+  padding: 0;
+  margin: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border: 6px solid #f39c12;
+}
+
+.table_btn {
+  height: 100%;
+  width: 100%;
+}
