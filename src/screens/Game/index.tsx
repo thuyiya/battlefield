@@ -29,7 +29,7 @@ const Game = () => {
         color: 'transparent',
         name: '',
         size: 0,
-        count: 0
+        count: 0,
       },
     }
     const board = Array.from(Array(GAME_BOARD.ROWS), (_, r) =>
@@ -79,7 +79,7 @@ const Game = () => {
     <div className='container'>
       <div className='item tablet-row'>
         <ScoreBoard />
-        <ShipStatusBoard />
+        <ShipStatusBoard shipsData={shipData} />
       </div>
       <div className='item'>
         <BattlefieldGrid battleField={battleField} onChange={onChange} />

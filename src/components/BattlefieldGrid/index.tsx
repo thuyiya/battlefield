@@ -1,6 +1,6 @@
 import { FC, memo } from 'react'
-import { Slot } from '../../types';
-import Cell from '../Cell';
+import { Slot } from '../../types'
+import Cell from '../Cell'
 import './BattlefieldGrid.css'
 
 type Props = {

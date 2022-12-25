@@ -5,4 +5,4 @@ type ShipTypes = {
   }
 }
 
-export default ShipTypes;
+export default ShipTypes

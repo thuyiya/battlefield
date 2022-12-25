@@ -14,7 +14,7 @@ const ScoreBoardItems: FC<PropsScoreBoardItems> = ({ bgColor, score, player }) =
       }}
     >
       <h1>{score || '00'}</h1>
-      <div className='line'/>
+      <div className='line' />
       <h3 style={{ display: 'inline' }}>{player || 'player _'}</h3>
     </div>
   )

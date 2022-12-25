@@ -6,4 +6,4 @@ type Ship = {
   name: string
 }
 
-export default Ship;
+export default Ship

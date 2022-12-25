@@ -1,4 +1,4 @@
-import ShipTypes from './ShipTypes';
+import ShipTypes from './ShipTypes'
 
 type Layout = {
   ship: string
@@ -6,7 +6,7 @@ type Layout = {
 }
 
 type MainData = {
-  shipTypes: ShipTypes;
+  shipTypes: ShipTypes
   layout: Array<Layout>
 }
 
