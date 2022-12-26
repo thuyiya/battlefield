@@ -10,4 +10,4 @@ type MainData = {
   layout: Array<Layout>
 }
 
-export default MainData
+export type { Layout, MainData }

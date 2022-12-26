@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import useApp from '../../hooks/useApp'
 import { BattlefieldGrid, ScoreBoard, ShipStatusBoard, GameMenu } from '../../components'
 import sampleData from '../../data/sample.json'
-import { MainData, Ship, Slot } from '../../types'
+import { MainData, Ship, Slot, Layout } from '../../types'
 import { GAME_BOARD } from '../../constants'
 
 import './Game.css'
@@ -13,10 +13,10 @@ const Game = () => {
   const appContext = useApp()
   const [battleField, setBattleField] = useState<Slot[][]>([])
   const [shipData, setShipData] = useState<Array<Ship>>([])
-  const [layout, setLayout] = useState<Array<any>>([])
+  const [layout, setLayout] = useState<Array<Layout>>([])
 
   const hitCalculate = (hit: Array<number>) => {
-    let hitAShip: any = null
+    let hitAShip: Layout = { positions: [], ship: ''}
     for (let lay = 0; lay < layout.length; lay++) {
       const ship = layout[lay]
       for (let p = 0; p < ship.positions.length; p++) {
@@ -28,7 +28,7 @@ const Game = () => {
       }
     }
 
-    if (hitAShip) {
+    if (hitAShip.ship) {
       const newShipData = shipData.map((ship: Ship) => {
         if (ship.name === hitAShip.ship) {
           ship.count = (ship.count || 0) + 1
