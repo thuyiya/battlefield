@@ -28,6 +28,14 @@ const [allPoints, setAllPoints] = useState<number>(0)
     }))
   }
 
+  const resetScore = () => {
+    setUser((prevState) => ({
+      ...prevState,
+      hit: 0,
+      shoot: 0,
+    }))
+  }
+
   const value: AppContextInterface = {
     user,
     onLogin,
@@ -35,6 +43,7 @@ const [allPoints, setAllPoints] = useState<number>(0)
     updateHit,
     allPoints,
     pointUpdate: setAllPoints,
+    resetScore,
   }
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>

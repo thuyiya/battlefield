@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import useApp from '../../hooks/useApp'
-import { BattlefieldGrid, ScoreBoard, ShipStatusBoard } from '../../components'
+import { BattlefieldGrid, ScoreBoard, ShipStatusBoard, GameMenu } from '../../components'
 import sampleData from '../../data/sample.json'
 import { MainData, Ship, Slot } from '../../types'
 import { GAME_BOARD } from '../../constants'
@@ -122,6 +122,7 @@ const Game = () => {
       <div>
         <BattlefieldGrid battleField={battleField} onChange={onChange} />
       </div>
+      <GameMenu init={setupGame} />
     </div>
   )
 }

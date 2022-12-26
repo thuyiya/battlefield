@@ -8,6 +8,7 @@ interface AppContextInterface {
   updateHit: () => void
   updateShoot: () => void
   pointUpdate: (p: number) => void
+  resetScore: () => void
 }
 
 const AppContext = createContext<AppContextInterface | null>(null)
