@@ -27,6 +27,10 @@ input {
   background-color: #f39c12;
 }
 
+.btn:disabled {
+  background-color: #b5a283;
+}
+
 .col-2 {
   display: grid;
   grid-gap: 10px;
