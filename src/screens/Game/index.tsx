@@ -13,9 +13,42 @@ const Game = () => {
   const appContext = useApp()
   const [battleField, setBattleField] = useState<Slot[][]>([])
   const [shipData, setShipData] = useState<Array<Ship>>([])
+  const [layout, setLayout] = useState<Array<any>>([])
+
+  const hitCalculate = (hit: Array<number>) => {
+    let hitAShip: any = null
+    for (let lay = 0; lay < layout.length; lay++) {
+      const ship = layout[lay]
+      for (let p = 0; p < ship.positions.length; p++) {
+        if (JSON.stringify(ship.positions[p]) === JSON.stringify(hit)) {
+          hitAShip = ship
+          appContext?.updateHit()
+          break
+        }
+      }
+    }
+
+    if (hitAShip) {
+      const newShipData = shipData.map((ship: Ship) => {
+        if (ship.name === hitAShip.ship) {
+          ship.count = (ship.count || 0) + 1
+          return ship
+        }
+
+        return ship
+      })
+      setShipData(newShipData)
+    }
+  }
 
   const onChange = (position: Array<number>) => {
-    console.log(position)
+    const newBattleField = battleField
+    if (!newBattleField[position[0]][position[1]].hit) {
+      appContext?.updateShoot()
+      newBattleField[position[0]][position[1]].hit = true
+      setBattleField([...newBattleField])
+      hitCalculate(position)
+    }
   }
 
   const drawBattleFieldAndLayout = (shipAndPositionData: MainData) => {
@@ -40,10 +73,13 @@ const Game = () => {
       })),
     )
 
+    let allPoints = 0
+
     for (let i = 0; i < shipAndPositionData.layout.length; i++) {
       const element = shipAndPositionData.layout[i]
       for (let p = 0; p < element.positions.length; p++) {
         const pos: Array<number> = element.positions[p]
+        allPoints++
         board[pos[0]][pos[1]].ship = {
           id: `${pos[0]}-${pos[1]}-${element.ship}`,
           color: 'transparent',
@@ -51,6 +87,8 @@ const Game = () => {
         }
       }
     }
+    appContext?.pointUpdate(allPoints)
+    setLayout(shipAndPositionData.layout)
     setBattleField(board)
   }
 
@@ -77,11 +115,11 @@ const Game = () => {
 
   return (
     <div className='container'>
-      <div className='item tablet-row'>
+      <div>
         <ScoreBoard />
         <ShipStatusBoard shipsData={shipData} />
       </div>
-      <div className='item'>
+      <div>
         <BattlefieldGrid battleField={battleField} onChange={onChange} />
       </div>
     </div>

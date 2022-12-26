@@ -3,7 +3,11 @@ import User from '../types/User'
 
 interface AppContextInterface {
   user: User | null
+  allPoints: number
   onLogin: (user: string) => void
+  updateHit: () => void
+  updateShoot: () => void
+  pointUpdate: (p: number) => void
 }
 
 const AppContext = createContext<AppContextInterface | null>(null)

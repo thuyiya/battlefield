@@ -4,8 +4,9 @@ import User from '../types/User'
 
 const AppProvider: FC<{ children: JSX.Element }> = ({ children }) => {
   const [user, setUser] = useState<User>({})
+const [allPoints, setAllPoints] = useState<number>(0)
 
-  const handleLogin = async (name: string) => {
+  const onLogin = async (name: string) => {
     setUser({
       name,
       hit: 0,
@@ -13,9 +14,27 @@ const AppProvider: FC<{ children: JSX.Element }> = ({ children }) => {
     })
   }
 
+  const updateShoot = () => {
+    setUser((prevState: User) => ({
+      ...prevState,
+      shoot: prevState?.shoot ? prevState?.shoot + 1 : 1,
+    }))
+  }
+
+  const updateHit = () => {
+    setUser((prevState: User) => ({
+      ...prevState,
+      hit: prevState?.hit ? prevState?.hit + 1 : 1,
+    }))
+  }
+
   const value: AppContextInterface = {
     user,
-    onLogin: handleLogin,
+    onLogin,
+    updateShoot,
+    updateHit,
+    allPoints,
+    pointUpdate: setAllPoints,
   }
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>

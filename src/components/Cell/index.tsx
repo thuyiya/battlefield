@@ -2,6 +2,8 @@ import { FC, memo } from 'react'
 import IMAGE_HIT from '../../assets/images/Hit.png'
 import IMAGE_MISS from '../../assets/images/Miss.png'
 
+import './Cell.css'
+
 type PropsCells = {
   miss: boolean
   hit: boolean
@@ -17,8 +19,8 @@ const Cell: FC<PropsCells> = ({ miss, hit, position, onChange, ship }) => {
       style={{ backgroundColor: ship.color || 'gray' }}
       onClick={() => onChange(position)}
     >
-      {miss && <img src={IMAGE_MISS} className='img' alt='miss' width='auto' height='auto' />}
-      {hit && <img src={IMAGE_HIT} className='img' alt='hit' width='auto' height='auto' />}
+      {miss && <img src={IMAGE_MISS} className='img_cell' alt='miss' width='auto' height='auto' />}
+      {hit && <img src={IMAGE_HIT} className='img_cell' alt='hit' width='auto' height='auto' />}
     </button>
   )
 }
