@@ -1,11 +1,12 @@
 import ScoreBoardItems from '../ScoreBoardItems'
 import useApp from '../../hooks/useApp'
+import './ScoreBoard.css'
 
 const ScoreBoard = () => {
   const appContext = useApp()
 
   return (
-    <div className='flex_center_row t-me-20'>
+    <div className='score_board'>
       <ScoreBoardItems
         bgColor='#f39c12'
         player={appContext?.user?.name}

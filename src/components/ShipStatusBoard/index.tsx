@@ -3,6 +3,8 @@ import { SHIP_IMAGES } from '../../constants'
 import { Ship } from '../../types'
 import ShipStatus from '../ShipStatus'
 
+import './ShipStatusBoard.css'
+
 type PropsShipStatus = {
   shipsData: Array<Ship>
 }

@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import useApp from '../../hooks/useApp'
 import { STRINGS } from '../../constants'
 
-import './welcome.css'
+import './Welcome.css'
 
 const Welcome = () => {
   const appContext = useApp()
@@ -21,8 +21,8 @@ const Welcome = () => {
   // console.log('appContext welcome ', appContext)
 
   return (
-    <div className='container'>
-      <h1>Welcome To BATTLEFIELD</h1>
+    <div className='welcome_container'>
+      <h1>{STRINGS.WELCOME.TITLE}</h1>
       <input
         className='name_input'
         data-testid='player-name-input'

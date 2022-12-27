@@ -8,8 +8,6 @@ import { generateSlotBoard, updateSlotWithShipData } from '../../utils'
 
 import './Game.css'
 
-const SHIP_AND_POSITION: MainData = sampleData
-
 const Game = () => {
   const appContext = useApp()
   const [battleField, setBattleField] = useState<Slot[][]>([])
@@ -88,24 +86,30 @@ const Game = () => {
   }
 
   const setupGame = () => {
-    drawBattleFieldAndLayout(SHIP_AND_POSITION)
-    setupShipData(SHIP_AND_POSITION)
+    const shipAndPositionData: MainData = sampleData
+
+    drawBattleFieldAndLayout(shipAndPositionData)
+    setupShipData(shipAndPositionData)
   }
 
   useEffect(() => {
     setupGame()
   }, []) // eslint-disable-line react-hooks/exhaustive-deps
 
+  console.log('shipData ', shipData)
+
   return (
-    <div className='container'>
-      <div>
-        <ScoreBoard />
-        <ShipStatusBoard shipsData={shipData} />
+    <div className='game_container'>
+      <div className='game_board'>
+        <div className='score_board_details'>
+          <ScoreBoard />
+          <ShipStatusBoard shipsData={shipData} />
+        </div>
+        <div className='item'>
+          <BattlefieldGrid battleField={battleField} onChange={onChange} />
+        </div>
+        <GameMenu init={setupGame} />
       </div>
-      <div>
-        <BattlefieldGrid battleField={battleField} onChange={onChange} />
-      </div>
-      <GameMenu init={setupGame} />
     </div>
   )
 }

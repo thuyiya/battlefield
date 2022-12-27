@@ -1,11 +1,12 @@
-import CarrierShape from '../assets/images/Carrier Shape.png'
-import DestroyerShape from '../assets/images/Aircraft Shape.png'
+import DestroyerShape from '../assets/images/Carrier Shape.png'
+import CarrierShape from '../assets/images/Aircraft Shape.png'
 import BattleshipShape from '../assets/images/Battleship Shape.png'
 import CruiserShape from '../assets/images/Cruiser Shape.png'
 import SubmarineShape from '../assets/images/Submarine Shape.png'
 
 const STRINGS = {
   WELCOME: {
+    TITLE: 'Welcome To BATTLEFIELD',
     LOGIN_BUTTON: "Let's Play",
     INPUT_PLACEHOLDER: 'Player Name',
   },
