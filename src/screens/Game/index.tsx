@@ -4,6 +4,7 @@ import { BattlefieldGrid, ScoreBoard, ShipStatusBoard, GameMenu } from '../../co
 import sampleData from '../../data/sample.json'
 import { MainData, Ship, Slot, Layout } from '../../types'
 import { GAME_BOARD } from '../../constants'
+import { generateSlotBoard, updateSlotWithShipData } from '../../utils'
 
 import './Game.css'
 
@@ -65,28 +66,10 @@ const Game = () => {
         count: 0,
       },
     }
-    const board = Array.from(Array(GAME_BOARD.ROWS), (_, r) =>
-      Array.from({ length: GAME_BOARD.CELLS }, (_, c) => ({
-        ...slot,
-        id: `${r}-${c}`,
-        position: [r, c],
-      })),
-    )
+    const slots = generateSlotBoard(slot, GAME_BOARD.ROWS, GAME_BOARD.CELLS)
 
-    let allPoints = 0
-
-    for (let i = 0; i < shipAndPositionData.layout.length; i++) {
-      const element = shipAndPositionData.layout[i]
-      for (let p = 0; p < element.positions.length; p++) {
-        const pos: Array<number> = element.positions[p]
-        allPoints++
-        board[pos[0]][pos[1]].ship = {
-          id: `${pos[0]}-${pos[1]}-${element.ship}`,
-          color: 'transparent',
-          name: element.ship,
-        }
-      }
-    }
+    const {allPoints, board } = updateSlotWithShipData(shipAndPositionData.layout, slots)
+    
     appContext?.pointUpdate(allPoints)
     setLayout(shipAndPositionData.layout)
     setBattleField(board)
