@@ -140,12 +140,35 @@ Ship layout data:
 }
 ```
 
+#### libraries
+
+- ReactJS (18.2.0)
+- Typescript (4.9.4)
+- React Test Render (18.2.0)
+- React Dom (18.2.0)
+- React Router Dom (6.5.0)
+- eslint (8.30.0)
+
 ### Get Start
 
-#### Understanding the File Structure
+Frist of all you have to install packages 
+```
+npm install 
+```
+For run the application in develop mode
+```
+npm run start
+```
 
+`npm run build` Runs the built app in production mode.
 
-### Workflow
+Server on `0.0.0.0:3000`, url: `http://localhost:3000`
+
+Use the  
+```
+npm run test
+```
+for see all the tests
 
 ### Frontend
 - Screenshot 01
@@ -154,8 +177,18 @@ Ship layout data:
 
 - Screenshot 02
 
-![alt text](https://raw.githubusercontent.com/thuyiya/battlefield/main/sample/2.png?raw=true)
+![alt text](https://raw.githubusercontent.com/thuyiya/battlefield/main/docs/2.png?raw=true)
 
 - Screenshot 03
 
-![alt text](https://raw.githubusercontent.com/thuyiya/battlefield/main/sample/3.png?raw=true)
+![alt text](https://raw.githubusercontent.com/thuyiya/battlefield/main/docs/3.png?raw=true)
+
+
+
+#### Developer Tools And Env
+
+- VSCode (Version: 1.74.3)
+- Node (v14.17.3)
+- Npm (6.14.13)
+
+##### Documented By _Thusitha Jayalath_
