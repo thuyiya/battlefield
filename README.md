@@ -144,50 +144,18 @@ Ship layout data:
 
 #### Understanding the File Structure
 
-battlefield
-│  
-└───src
-│ │ App.tsx
-│ │ index.tsx
-│ │
-│ └───assets
-│ │ │ images
-│ │  
-│ └───constants
-│ │ │ app.ts
-│ │ │ styles.ts
-│ │
-│ └───**tests**
-│ │
-│ └───components
-│ │ │ index.ts
-│ │ │ BattleFieldGrid
-│ │ │ ScoreBoard
-│ │ │ ShipStatusBoard
-│ │
-│ └───routes
-│ │ │ index.ts
-│ │ │ ProtectedRoute.tsx
-│ │
-│ └───hooks
-│ │ │ useApp.ts
-│ │
-│ └───screens
-│ │ │ index.ts
-│ │ │ Game
-│ │ │ Welcome
-│ │
-│ └───context
-│ │ │ AppContext.tsx
-│ │ │ AppProvider.tsx
-│ │
-│ └───types
-│ │ │ USer.ts
 
 ### Workflow
 
-#### Desktop
+### Frontend
+- Screenshot 01
 
-#### Mobile
+![alt text](https://raw.githubusercontent.com/thuyiya/battlefield/main/docs/1.png?raw=true)
 
-#### Tab
+- Screenshot 02
+
+![alt text](https://raw.githubusercontent.com/thuyiya/battlefield/main/sample/2.png?raw=true)
+
+- Screenshot 03
+
+![alt text](https://raw.githubusercontent.com/thuyiya/battlefield/main/sample/3.png?raw=true)

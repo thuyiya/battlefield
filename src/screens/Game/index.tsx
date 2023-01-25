@@ -6,7 +6,7 @@ import { MainData, Ship, Slot, Layout } from '../../types'
 import { GAME_BOARD } from '../../constants'
 import { generateSlotBoard, updateSlotWithShipData } from '../../utils'
 
-import './Game.css'
+import './game.css'
 
 const Game = () => {
   const appContext = useApp()

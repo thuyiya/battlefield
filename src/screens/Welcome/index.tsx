@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import useApp from '../../hooks/useApp'
 import { STRINGS } from '../../constants'
 
-import './Welcome.css'
+import './welcome.css'
 
 const Welcome = () => {
   const appContext = useApp()
