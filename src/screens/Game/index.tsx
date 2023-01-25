@@ -96,8 +96,6 @@ const Game = () => {
     setupGame()
   }, []) // eslint-disable-line react-hooks/exhaustive-deps
 
-  console.log('shipData ', shipData)
-
   return (
     <div className='game_container'>
       <div className='game_board'>

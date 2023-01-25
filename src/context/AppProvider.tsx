@@ -4,7 +4,7 @@ import User from '../types/User'
 
 const AppProvider: FC<{ children: JSX.Element }> = ({ children }) => {
   const [user, setUser] = useState<User>({})
-const [allPoints, setAllPoints] = useState<number>(0)
+  const [allPoints, setAllPoints] = useState<number>(0)
 
   const onLogin = async (name: string) => {
     setUser({

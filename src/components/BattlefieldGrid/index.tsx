@@ -10,7 +10,7 @@ type Props = {
 
 const BattleFieldGrid: FC<Props> = ({ battleField, onChange }) => {
   return (
-    <table>
+    <table data-testid='grid-table'>
       <tbody>
         {battleField.map((row: Array<Slot>, i: number) => (
           <tr key={i}>

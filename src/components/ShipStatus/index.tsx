@@ -19,19 +19,21 @@ const ShipStatus: FC<PropsShip> = ({ image, size, count = 0 }) => {
         {Array.from(Array(size), (_, r: number) => r + 1 <= count).map((item, key) =>
           item ? (
             <img
+              data-testid={'hit_small_img_status'}
               className='img_status'
               key={key}
               src={IMAGE_HIT_SMALL}
-              alt='hit'
+              alt='hit_small'
               width='auto'
               height='auto'
             />
           ) : (
             <img
+              data-testid={'miss_small_img_status'}
               className='img_status'
               key={key}
               src={IMAGE_MISS_SMALL}
-              alt='hit'
+              alt='miss_small'
               width='auto'
               height='auto'
             />
